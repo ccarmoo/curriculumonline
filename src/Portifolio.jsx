@@ -63,35 +63,35 @@ export default function Portifolio() {
     {
       id: 7,
       titulo: "Design de Login Comp. Áerea",
-      subtitulo:"Página de login ágil e prática.",
+      subtitulo: "Página de login ágil e prática.",
       descricao: "Essa aplicação foi criada utilizando somente html e css. Em uma interface mais simples e leve para interações, o usuário interage melhor com o sistema.",
       tecnologias: ["Html", "CSS"]
     },
     {
       id: 8,
       titulo: "Home da Comp Áerea.",
-      subtitulo:"Gerenciamento de voos, Status de frota e Horários.",
+      subtitulo: "Gerenciamento de voos, Status de frota e Horários.",
       descricao: "Essa é a página inicial do meu sistema de voo. Assim como a página de login, foi criado totalmente em html e css através do VSCODE sem utilizar nenhuma outra tecnologia.",
       tecnologias: ["HTML", "CSS"]
     },
-     {
+    {
       id: 9,
       titulo: "Turismo em Botucatu",
-      subtitulo:"Sistema feito para conhecer a cidade e procurar lugares onde passear.",
+      subtitulo: "Sistema feito para conhecer a cidade e procurar lugares onde passear.",
       descricao: "Esse sistema foi feito para o usuário procurar lugares para turismo na cidade e conhecer um pouco de Botucatu. Nessa página, coloquei contatos para mais informações sobre os passeios e coloquei um mapa para encontrar o lugar físico onde tiramos infos.",
       tecnologias: ["HTML", "CSS"]
     },
-     {
+    {
       id: 10,
       titulo: "Turismo em Botucatu",
-      subtitulo:"Interface vazia de página de eventos.",
+      subtitulo: "Interface vazia de página de eventos.",
       descricao: "Ainda no sistema de turismo na cidade, adicionei uma página onde seriam exibidos os eventos que estariam acontecendo na cidade.",
       tecnologias: ["HTML", "CSS"]
     },
-     {
+    {
       id: 11,
       titulo: "Turismo em Botucatu",
-      subtitulo:"Exibição dos lugares que pode encontrar por Botucatu.",
+      subtitulo: "Exibição dos lugares que pode encontrar por Botucatu.",
       descricao: "Aqui foi exibido alguns lugares e links como: lugares para comer, lugares para se hospedar.. Nessa imagem, por exemplo, está em exibição a Cuesta, um dos lugares mais famosos de Botucatu.",
       tecnologias: ["HTML", "CSS"]
     }
@@ -223,8 +223,11 @@ export default function Portifolio() {
               >
                 <div className="bg-white p-3 shadow-sm project-card-box" style={{ borderRadius: '14px', border: '1px solid #e1dcd6' }}>
 
-                  <div className="image-container mb-3" style={{  height: '180px', overflow: 'hidden', borderRadius: '8px', backgroundColor: '#fffbf7', border: '1px solid #e1dcd6' }}>
-                    <ProjetoImagens imagem={`/p${proj.id}.png`} nome={proj.titulo} />
+                  <div className="image-container mb-3" style={{ height: '180px', overflow: 'hidden', borderRadius: '8px', backgroundColor: '#fffbf7', border: '1px solid #e1dcd6' }}>
+                    <ProjetoImagens
+                      imagem={`${import.meta.env.BASE_URL}p${proj.id}.png`}
+                      nome={proj.titulo}
+                    />
                   </div>
 
                   <div className="text-start px-1">
@@ -257,7 +260,10 @@ export default function Portifolio() {
 
             <div className="text-start">
               <div className="modal-image-container mb-4" style={{ height: '220px', overflow: 'hidden', borderRadius: '12px', backgroundColor: '#fffbf7', border: '1px solid #e1dcd6' }}>
-                <ProjetoImagens imagem={`/p${projetoSelecionado.id}.png`} nome={projetoSelecionado.titulo} />
+                <ProjetoImagens
+                  imagem={`${import.meta.env.BASE_URL}p${projetoSelecionado.id}.png`}
+                  nome={projetoSelecionado.titulo}
+                />
               </div>
 
               <span className="badge px-3 py-2 rounded-pill mb-2 text-white" style={{ backgroundColor: '#008899', fontSize: '11px', letterSpacing: '0.5px' }}>

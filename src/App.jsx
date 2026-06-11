@@ -8,7 +8,7 @@ import Interesse from './Interesse';
 function App() {
   return (
     <div className="container-fluid p-0">
-      <BrowserRouter>
+      <BrowserRouter basename="/curriculumonline/">
         <Routes>
           <Route path='/' element={<FormPage />} />
           <Route path='/portifolio' element={<Portifolio />} />
